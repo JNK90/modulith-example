@@ -4,8 +4,18 @@ plugins {
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
 }
 
-repositories {
-    mavenCentral()
+allprojects {
+    version = "1.0"
+
+    repositories {
+        mavenCentral()
+    }
+}
+
+subprojects {
+    apply(plugin="java")
+    apply(plugin="org.springframework.boot")
+    apply(plugin="io.spring.dependency-management")
 }
 
 dependencies {

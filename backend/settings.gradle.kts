@@ -9,5 +9,4 @@
 
 rootProject.name = "backend"
 include("contextA")
-include("wrapper")
 include("contextB")
