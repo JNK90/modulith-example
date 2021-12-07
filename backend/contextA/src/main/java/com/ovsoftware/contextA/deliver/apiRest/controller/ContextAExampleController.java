@@ -1,26 +1,26 @@
 package com.ovsoftware.contextA.deliver.apiRest.controller;
 
 
-import com.ovsoftware.contextA.entities.Message;
+import com.ovsoftware.contextA.entities.ContextAMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.ovsoftware.contextA.usecases.api.ExampleUsecase;
+import com.ovsoftware.contextA.usecases.api.ContextAExampleUsecase;
 
 @RestController()
 @RequestMapping("contextA")
-public class ExampleController {
+public class ContextAExampleController {
 
-    private final ExampleUsecase exampleUsecase;
+    private final ContextAExampleUsecase exampleUsecase;
 
     @Autowired
-    public ExampleController(ExampleUsecase exampleUsecase) {
+    public ContextAExampleController(ContextAExampleUsecase exampleUsecase) {
         this.exampleUsecase = exampleUsecase;
     }
 
     @GetMapping(value = "/message", produces = { "application/json" })
-    public Message getMessage() {
+    public ContextAMessage getMessage() {
         return exampleUsecase.exec();
     }
 }

@@ -10,6 +10,7 @@ repositories {
 
 dependencies {
     implementation(project(":contextA"))
+    implementation(project(":contextB"))
 
     implementation("org.springframework.boot:spring-boot-starter-web")
 }

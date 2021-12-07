@@ -12,6 +12,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/contextA" />
+            <option value="$PROJECT_DIR$/contextB" />
             <option value="$PROJECT_DIR$/wrapper" />
           </set>
         </option>

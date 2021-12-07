@@ -1,9 +1,9 @@
 package com.ovsoftware.contextA.entities;
 
-public class Message {
+public class ContextAMessage {
     public final String content;
 
-    public Message(String content) {
+    public ContextAMessage(String content) {
         this.content = content;
     }
 }
