@@ -1,4 +1,10 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { map, Observable } from 'rxjs';
+
+type Message = {
+  content: string;
+}
 
 @Component({
   selector: 'client-context-b',
@@ -8,9 +14,12 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class ContextBComponent implements OnInit {
 
-  constructor() { }
+  message$!: Observable<string>;
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.message$ = this.http.get<Message>('/contextB/message').pipe(map(res => res.content));
   }
 
 }
